@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Image recognition</title>
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+    
+        h2{
+            text-align: center;
+        }
+        .conteiner{
+            margin-top:20px;
+         
+        }   
+		#add{
+			margin-top: 10px;
+			margin-left: 42px;
+		}
+		body{
+			background-color:#FFDAB9;
+			color:DimGray;
+		}
+		#rect{
+			background-color:#FFDAB9;
+		}
+		
+    </style>
+</head>
+
+<body>
+  <div class="container">
+    <br></br>
+    <div id="ttle">
+    <h2 id="nazva">Розпізнавання об'єктів на картинці</h2>
+    </div>
+    <center>
+	<div id="content">
+        <img id='idImage' style="width: 256px; height: 256px;"><br>
+        <input id="add" type="file" onchange="showFiles(event)" accept=".png, .jpg, .jpeg">
+    </div>
+	</center>
+    <!--<div id='console'></div>-->
+    <br></br>
+    <center><div id="chart_div"></div></center>
+    <script src="index.js"></script>
+    <br></br>
+</body>
+</div>
+<script type="text/javascript">
+</script>
+</html>

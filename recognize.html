@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Image recognition</title>
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+        html {
+        margin: 0px;
+        padding: 0px;
+      }
+      
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      
+      ul {
+        list-style: none;
+        /*убираем маркеры списка*/
+        margin: 0;
+        /*убираем отступы*/
+        padding-left: 0;
+        /*убираем отступы*/
+        background: #0086ac;
+        /*добавляем фон всему меню (заменив этот параметр, вы поменяете цвет всего меню)*/
+        height: 70px;
+        /*задаем высоту*/
+      }
+      
+      a {
+        text-decoration: none;
+        /*убираем подчеркивание текста ссылок*/
+        background: #0086ac;
+        /*добавляем фон к пункту меню (заменив этот параметр, вы поменяете цвет всех пунктов меню)*/
+        color: #fff;
+        /*меняем цвет ссылок*/
+        padding: 0px 15px;
+        /*добавляем отступ*/
+        font-family: arial;
+        /*меняем шрифт*/
+        line-height: 50px;
+        /*ровняем меню по вертикали*/
+        display: block;
+        border-right: 1px solid #0086ac;
+        /*добавляем бордюр справа*/
+      }
+      
+      a:hover {
+        background: #087391;
+        /*добавляем эффект при наведении*/
+      }
+      
+      li {
+        float: left;
+        /*Размещаем список горизонтально для реализации меню*/
+        margin-top: 10px;
+      }
+      
+      #logo_icon {
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        margin-top: 5 px;
+      }
+      
+      #cimage {
+        margin: 20px;
+        width: 160px;
+      }
+      
+      #art1 {
+        display: block;
+      }
+      
+      #art2 {
+        display: block;
+      }
+      
+      .article1 {
+        display: block;
+        width: 1250px;
+        margin: 20px;
+        text-indent: 25px;
+        text-align: justify;
+      }
+      
+      .content {
+        display: flex;
+        width: 500px;
+      }
+      
+      img {
+        display: block;
+      }
+        h2{
+            text-align: center;
+        }
+        .conteiner{
+            margin-top:20px;
+         
+        }   
+		#add{
+			margin-top: 10px;
+			margin-left: 42px;
+		}
+		
+		#rect{
+			background-color:#FFDAB9;
+		}
+		
+    </style>
+</head>
+
+<body>
+    <ul>
+      <li>
+        <a href="index.html"><img id="logo_icon" src="logo.png"></a>
+      </li>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="recognize.html">Розпізнавання</a></li>
+    </ul>
+  <div class="container">
+    <br></br>
+    <div id="ttle">
+    <h2 id="nazva">Розпізнавання об'єктів на картинці</h2>
+    </div>
+    <center>
+	<div id="content">
+        <img id='idImage' style="width: 256px; height: 256px;"><br>
+        <input id="add" type="file" onchange="showFiles(event)" accept=".png, .jpg, .jpeg">
+    </div>
+	</center>
+    <!--<div id='console'></div>-->
+    <br></br>
+    <center><div id="chart_div"></div></center>
+    <script src="js.js"></script>
+    <br></br>
+</body>
+</div>
+</html>
